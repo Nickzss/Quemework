@@ -1,0 +1,130 @@
+/* Estilos para la página de productos */
+.productos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.producto {
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.producto:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.producto img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+.producto h2 {
+    color: #0078D4;
+    margin-bottom: 10px;
+}
+
+.producto p {
+    font-size: 0.9em;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.producto .precio {
+    font-weight: bold;
+    color: #107C10;
+    font-size: 1.1em;
+    margin-bottom: 15px;
+}
+
+.btn-comprar {
+    display: inline-block;
+    background-color: #0078D4;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.btn-comprar:hover {
+    background-color: #005a9e;
+}
+.producto-imagenes {
+    position: relative;
+    overflow: hidden;
+}
+
+.imagen-principal {
+    transition: opacity 0.3s ease;
+}
+
+.mini-galeria {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.mini-galeria img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: none;
+}
+
+.mini-galeria img.active {
+    display: block;
+}
+
+.producto:hover .imagen-principal {
+    opacity: 0;
+}
+
+.producto:hover .mini-galeria {
+    opacity: 1;
+}
+
+/* Estilos para los controles de navegación */
+.nav-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 10px;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.nav-btn.prev {
+    left: 10px;
+}
+
+.nav-btn.next {
+    right: 10px;
+}
+
+/* Responsive design */
+@media screen and (max-width: 768px) {
+    .productos-grid {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .productos-grid {
+        grid-template-columns: 1fr;
+    }
+}

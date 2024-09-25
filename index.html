@@ -11,8 +11,8 @@
     <header>
         <nav>
             <ul>
-                <li><a href="Proyecto inicial_1.html">Inicio</a></li>
-                <li><a href="tarjetas.html">Tarjetas</a></li>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="products.html">Productos</a></li>
                 <li><a href="promociones.html">Promociones</a></li>
                 <li><a href="tarea.html">Galería</a></li>
                 <li><a href="aboutus.html">Sobre nosotros/Contactos</a></li>
@@ -22,22 +22,35 @@
     <section class="primero">
         <section class="articulos">
             <article>
-                <h2>Innovación y Tecnología al Alcance de Todos</h2>
-                <p>En Microsoft, estamos dedicados a empoderar a cada persona y cada organización en el planeta para lograr más. Con una rica historia de innovación tecnológica, hemos desarrollado productos y servicios que transforman la manera en que las personas viven, trabajan y juegan.</p>
-                <p><strong>Nuetros Productos Destacados:</strong></p>
+                <h2>Quienes Somos?</h2>
+                <p>En Microsoft, nos comprometemos a empoderar a cada persona y organización del planeta para lograr más. Desde nuestra fundación en 1975, hemos innovado en tecnología para brindar soluciones que transforman la manera en que vivimos y trabajamos.</p>
+                <p><strong>Nuetra Mision</strong></p>
+                <p>La misión de Microsoft es ayudar a las personas y empresas de todo el mundo a realizar su máximo potencial. Ofrecemos productos y servicios que impulsan el desarrollo digital, conectando a millones de usuarios a nivel global.</p>
+                <p><strong>Soluciones y productos</strong></p>
                 <ul>
-                    <li><strong>Windows 11:</strong> El sistema operativo más reciente, diseñado para facilitar la conectividad, la productividad y la creatividad.</li>
-                    <li><strong>Microsoft Office 365:</strong> La suite de productividad que incluye Word, Excel, PowerPoint y más, disponible en la nube para acceder desde cualquier lugar.</li>
-                    <li><strong>Microsoft Azure:</strong> Nuestra plataforma de servicios en la nube, que ofrece soluciones de almacenamiento, inteligencia artificial y análisis de datos a empresas de todo tamaño.</li>
-                    <li><strong>Xbox Series X|S:</strong> Las consolas de videojuegos más avanzadas, que ofrecen experiencias de juego inmersivas y de alta definición.</li>
+                    <li><strong>Microsoft 365:</strong> La suite de productividad más popular, que combina herramientas como Word, Excel, PowerPoint, y Teams para mejorar la colaboración.</li>
+                    <li><strong>Azure:</strong>Nuestra plataforma de nube que impulsa a empresas grandes y pequeñas, brindando soluciones en IA, big data y ciberseguridad.</li>
+                    <li><strong>Windows:</strong>El sistema operativo que impulsa la productividad y el entretenimiento en más de mil millones de dispositivos.</li>
+                    <li><strong>Xbox Series X|S:</strong>Nuestra plataforma de videojuegos que redefine la experiencia de entretenimiento digital.</li>
+                    <li><strong>LinkedIn</strong> La red profesional más grande del mundo, que ayuda a conectar talento con oportunidades.</li>
                 </ul>
             </article>
-            <article>
-                <h2>Compromiso con la Sostenibilidad</h2>
-                <p>Estamos comprometidos con la sostenibilidad y la reducción de nuestra huella ambiental. Microsoft se ha comprometido a ser carbono negativa para 2030, eliminando más carbono del que emitimos desde nuestra fundación en 1975.</p>
-                <p><strong>Impulsando la Educación y el Conocimiento:</strong></p>
-                <p>Creemos en el poder de la educación para cambiar vidas. A través de iniciativas como <strong>Microsoft Learn</strong> y <strong>Imagine Academy</strong>, proporcionamos recursos educativos gratuitos y asequibles para ayudar a las personas a adquirir nuevas habilidades tecnológicas y avanzar en sus carreras.</p>
-            </article>
+<!-- ... (Contenido anterior) ... -->
+<article>
+    <h2>Innovación y tecnología</h2>
+    <p>En Microsoft, estamos a la vanguardia de la inteligencia artificial, el aprendizaje automático y la computación en la nube. Creemos que el futuro de la tecnología será clave para resolver los grandes desafíos del mundo, desde la sostenibilidad hasta la educación global.</p>
+    <p><strong>Impulsando la Educación y el Conocimiento:</strong></p>
+    <p>Creemos en el poder de la educación para cambiar vidas. A través de iniciativas como <strong>Microsoft Learn</strong> y <strong>Imagine Academy</strong>, proporcionamos recursos educativos gratuitos y asequibles para ayudar a las personas a adquirir nuevas habilidades tecnológicas y avanzar en sus carreras.</p>
+    
+    <!-- Nuevo contenedor de video -->
+    <div class="video-container">
+        <video controls>
+            <source src="imagenes/Introducing Windows 11.mp4" type="video/mp4">
+            Tu navegador no soporta el elemento de video.
+        </video>
+    </div>
+</article>
+<!-- ... (Contenido posterior) ... -->
         </section>
         <aside>
             <h3>Comunidad y Responsabilidad Social</h3>
@@ -46,9 +59,24 @@
             <p>Explora nuestra página web para conocer más sobre nuestros productos, servicios e iniciativas. Únete a nosotros en nuestro viaje para crear un futuro mejor y más sostenible a través de la tecnología.</p>
         </aside>
     </section>
-    <footer>
-        <p>Creado por skibidi toilet</p>
-    </footer>
-    <img src="imagenes/bumb.gif" class="gif" alt="GIF Animado">
+    <div class="marca-especial">By Nick Corp.</div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const videoContainer = document.querySelector('.video-container');
+            const video = videoContainer.querySelector('video');
+        
+            video.addEventListener('play', function() {
+                videoContainer.classList.add('playing');
+            });
+        
+            video.addEventListener('pause', function() {
+                videoContainer.classList.remove('playing');
+            });
+        
+            video.addEventListener('ended', function() {
+                videoContainer.classList.remove('playing');
+            });
+        });
+        </script>
 </body>
 </html>

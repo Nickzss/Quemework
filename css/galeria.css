@@ -1,0 +1,52 @@
+.container {
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    padding: 4% 2%;
+    box-sizing: border-box;
+    background-color: #0e9ea5;
+    opacity: 0.5;
+    background-size: 24px 24px;
+    background-image: repeating-linear-gradient(45deg, #f745ec 0, #f745ec 2.4000000000000004px, #0e9ea5 0, #0e9ea5 50%);
+}
+
+.box {
+    flex: 1;
+    overflow: hidden;
+    margin: 8px;
+    box-shadow: 20px 30px rgba(0, 0, 0, 0.20);
+    line-height: 0;
+    transition: all 600ms;
+}
+
+.box > img { 
+    width: 100%;
+    height: calc(100% - 10vh);
+    object-fit: cover;
+    transition: all 300ms;
+}
+
+.box > span {
+    font-size: 35px;
+    font-family: sans-serif;
+    display: block;
+    text-align: center;
+    height: 10vh;
+    line-height: 2.6;
+}
+
+.box:hover {
+    flex: 50%;
+}
+
+.box:hover > img {
+    width: 100%;
+    height: 100%;
+}
+.gif {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    width: 90px;
+    height: auto;
+}

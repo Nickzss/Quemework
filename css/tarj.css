@@ -1,0 +1,85 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #d039d3;
+}
+
+.contenedor {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #0f89c2;
+}
+
+.tarjeta-contenedor {
+    margin: 10px;
+    perspective: 800px;
+    width: 300px;
+}
+
+.tarjeta {
+    width: 100%;
+    height: 350px;
+    background: #651366;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: 0.7s ease;
+    box-shadow: 0px 10px 15px -5px rgba(0, 0, 0, 0.65);
+}
+
+.tarjeta img {
+    width: 100%;
+    height: 50px;
+    object-fit: auto;
+    flex: auto;
+}
+
+.adentro, .afuera {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    backface-visibility: hidden;
+}
+
+.adentro {
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+    font-family: "Open Sans", sans-serif;
+}
+
+.afuera {
+    transform: rotateY(180deg);
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+    font-family: "Open Sans", sans-serif;
+}
+
+.tarjeta-contenedor:hover .tarjeta {
+    transform: rotateY(180deg);
+}
+
+footer {
+    text-align: center;
+    margin-top: 20px;
+}
+.gif {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    width: 90px;
+    height: auto;
+
+}

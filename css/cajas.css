@@ -1,0 +1,29 @@
+body{
+    background-color: #ffffff;
+    opacity: 0.9;
+    background-image: radial-gradient(#75adeb 1px, #ffffff 1px);
+    background-size: 20px 20px;
+    background-position: 0 0, 0 0, 18px 32px, 18px 32px, 0 0, 18px 32px;
+    }
+    
+    .contenedor{
+        width:500px;
+        height: 200px;
+        background: #fff;
+        padding: 10px;
+        border:15px solid #c4d4eb ;
+        margin: 20px;
+        display: flex;
+    
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    
+    .elemento{
+        color: #fff;
+        margin: 5px;
+        width: 200px;
+        height: 50px;
+        background: #c4d4eb ;
+        text-align: center;
+    }

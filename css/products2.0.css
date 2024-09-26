@@ -1,0 +1,164 @@
+@font-face {
+    font-family: 'fuente';
+    src: url('fuente.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f0f0f0;
+    color: #333;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+
+
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+h1 {
+    text-align: center;
+    color: #0078D4;
+    margin-bottom: 30px;
+}
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: #fff;
+}
+.marca-especial {
+    font-family: 'fuente', sans-serif;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    font-size: 1.5em;
+    color: #ffa500;
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 5px 10px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+}
+
+/* Estilos para los productos */
+.productos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+.producto {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.producto:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+.producto h2 {
+    font-size: 1.2em;
+    color: #0078D4;
+    margin: 15px;
+}
+.producto p {
+    font-size: 0.9em;
+    margin: 0 15px 15px;
+}
+.producto .precio {
+    font-weight: bold;
+    color: #107C10;
+}
+.btn-comprar {
+    display: block;
+    background-color: #0078D4;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    text-decoration: none;
+    margin: 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+.btn-comprar:hover {
+    background-color: #005a9e;
+}
+
+/* Estilos para el slider */
+.slider-container {
+    position: relative;
+    overflow: hidden;
+    height: 200px;
+}
+.slider {
+    display: flex;
+    transition: transform 0.3s ease;
+    height: 100%;
+}
+.slider img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    flex-shrink: 0;
+}
+.slider-nav {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px;
+}
+.slider-nav label {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: rgb(255, 166, 0);
+    cursor: pointer;
+}
+.slider-nav label:hover {
+    background-color: rgba(255, 255, 255, 0.8);
+}
+input[type="radio"] {
+    display: none;
+}
+#slide1-1:checked ~ .slider { transform: translateX(0); }
+#slide1-2:checked ~ .slider { transform: translateX(-100%); }
+#slide1-3:checked ~ .slider { transform: translateX(-200%); }
+#slide2-1:checked ~ .slider { transform: translateX(0); }
+#slide2-2:checked ~ .slider { transform: translateX(-100%); }
+#slide2-3:checked ~ .slider { transform: translateX(-200%); }
+#slide3-1:checked ~ .slider { transform: translateX(0); }
+#slide3-2:checked ~ .slider { transform: translateX(-100%); }
+#slide3-3:checked ~ .slider { transform: translateX(-200%); }
+#slide4-1:checked ~ .slider { transform: translateX(0); }
+#slide4-2:checked ~ .slider { transform: translateX(-100%); }
+#slide4-3:checked ~ .slider { transform: translateX(-200%); }
+#slide5-1:checked ~ .slider { transform: translateX(0); }
+#slide5-2:checked ~ .slider { transform: translateX(-100%); }
+#slide5-3:checked ~ .slider { transform: translateX(-200%); }
+#slide6-1:checked ~ .slider { transform: translateX(0); }
+#slide6-2:checked ~ .slider { transform: translateX(-100%); }
+#slide6-3:checked ~ .slider { transform: translateX(-200%); }
+
+/* Responsive design */
+@media screen and (max-width: 768px) {
+    .productos-grid {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+}
+@media screen and (max-width: 480px) {
+    .productos-grid {
+        grid-template-columns: 1fr;
+    }
+    .marca-especial {
+        font-size: 1.2em;
+        bottom: 10px;
+        right: 10px;
+    }
+}

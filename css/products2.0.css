@@ -21,7 +21,7 @@ main {
 }
 h1 {
     text-align: center;
-    color: #0078D4;
+    color: #ff9a02;
     margin-bottom: 30px;
 }
 footer {
@@ -63,7 +63,7 @@ footer {
 }
 .producto h2 {
     font-size: 1.2em;
-    color: #0078D4;
+    color: #ff7b00;
     margin: 15px;
 }
 .producto p {
@@ -76,7 +76,7 @@ footer {
 }
 .btn-comprar {
     display: block;
-    background-color: #0078D4;
+    background-color: #ff5e00;
     color: #fff;
     text-align: center;
     padding: 10px;
@@ -86,7 +86,7 @@ footer {
     transition: background-color 0.3s ease;
 }
 .btn-comprar:hover {
-    background-color: #005a9e;
+    background-color: #ff7b00;
 }
 
 /* Estilos para el slider */

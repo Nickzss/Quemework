@@ -18,6 +18,12 @@ body {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
+    background-color: #000000;
+    opacity: 70;
+    background-image:  linear-gradient(135deg, #ff8b0a 25%, transparent 25%), linear-gradient(225deg, #ff8b0a 25%, transparent 25%), linear-gradient(45deg, #ff8b0a 25%, transparent 25%), linear-gradient(315deg, #ff8b0a 25%, #000000 25%);
+    background-position:  10px 0, 10px 0, 0 0, 0 0;
+    background-size: 20px 20px;
+    background-repeat: repeat;
 }
 
 header {
@@ -76,7 +82,7 @@ nav ul li a:hover {
 
 h2 {
     margin-bottom: 30px;
-    color: #0078d4;
+    color: #ff7c02;
     text-transform: uppercase;
     font-weight: 700;
 }
@@ -98,7 +104,7 @@ input, textarea {
 }
 
 input:focus, textarea:focus {
-    border-bottom-color: #0078d4;
+    border-bottom-color: #ff9100;
 }
 
 label {
@@ -116,7 +122,7 @@ textarea:focus ~ label,
 textarea:valid ~ label {
     top: -20px;
     font-size: 12px;
-    color: #0078d4;
+    color: #ff7b00;
 }
 
 textarea {
@@ -125,7 +131,7 @@ textarea {
 }
 
 button {
-    background: #0078d4;
+    background: #ff7300;
     color: #fff;
     border: none;
     padding: 10px 20px;

@@ -1,4 +1,15 @@
+@font-face {
+    font-family: 'fuente';
+    src: url('fuente.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
 body {
+    background-image: url('../imagenes/vl.jpeg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
     font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
@@ -7,7 +18,7 @@ body {
 }
 
 header {
-    background-color: #0078d4;
+    background-color: #FF6600;
     padding: 1rem 0;
     position: fixed;
     width: 100%;
@@ -28,18 +39,23 @@ nav ul li {
 }
 
 nav ul li a {
-    color: white;
+    color: rgb(255, 255, 255);
     text-decoration: none;
     font-weight: bold;
     transition: color 0.3s ease;
 }
 
 nav ul li a:hover {
-    color: #ffb900;
+    color: #FFD700;
 }
 
 input[type="radio"] {
     display: none;
+}
+.slogan {
+    color: #ffffff; 
+    font-weight: bold; 
+    font-size: 1.2em; 
 }
 
 .slider-wrapper {
@@ -63,29 +79,16 @@ input[type="radio"] {
 }
 
 h1, h2 {
-    color: #0078d4;
+    color: #FF6600;
 }
 
-.timeline {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    max-width: 800px;
-    margin: 2rem auto;
-}
-
-.event {
-    width: 200px;
+.content-box {
+    background-color: rgb(255, 115, 0);
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(255, 102, 0, 0.5);
+    max-width: 600px;
     margin: 1rem;
-    padding: 1rem;
-    background-color: white;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
-}
-
-.event:hover {
-    transform: scale(1.05);
 }
 
 .slider-nav {
@@ -101,14 +104,14 @@ h1, h2 {
     width: 12px;
     height: 12px;
     border-radius: 50%;
-    background-color: #bbb;
+    background-color: #bbbbbb;
     margin: 0 0.5rem;
     cursor: pointer;
     transition: background-color 0.3s ease;
 }
 
 .slider-nav label:hover {
-    background-color: #0078d4;
+    background-color: #FF6600;
 }
 
 #slide1:checked ~ .slider-wrapper {
@@ -131,17 +134,31 @@ h1, h2 {
 #slide2:checked ~ .slider-nav label:nth-child(2),
 #slide3:checked ~ .slider-nav label:nth-child(3),
 #slide4:checked ~ .slider-nav label:nth-child(4) {
-    background-color: #0078d4;
+    background-color: #FF6600;
 }
 
 footer {
     background-color: #333;
-    color: white;
+    color: rgb(255, 0, 0);
     text-align: center;
     padding: 1rem 0;
     position: fixed;
     bottom: 0;
     width: 100%;
+}
+.marca-especial {
+    font-family: 'fuente', sans-serif;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    font-size: 1.8em;
+    color: #ffa500;
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 5px 10px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+    animation: pulse 2s infinite;
 }
 
 @media (max-width: 768px) {
@@ -153,12 +170,8 @@ footer {
         margin: 0.5rem 0;
     }
 
-    .timeline {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .event {
-        width: 80%;
+    .content-box {
+        padding: 1rem;
+        margin: 0.5rem;
     }
 }

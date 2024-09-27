@@ -6,13 +6,13 @@
 }
 
 body {
-    background-image: url('../imagenes/w.jpg');
+    background-image: url('../imagenes/orrrr.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: center;
     margin: 0;
-    color: rgb(9, 75, 160);
+    color: rgb(255, 145, 0);
     text-align: center;
     font-family: "Roboto", sans-serif;
 }
@@ -42,7 +42,7 @@ nav ul li {
 }
 
 nav ul li a {
-    color: #fff;
+    color: #ffffff;
     text-decoration: none;
     font-weight: bold;
     padding: 10px 15px;
@@ -65,7 +65,7 @@ footer {
 article, aside {
     margin: 20px auto;
     max-width: 800px;
-    background-color: rgba(255, 255, 255, 0.8);
+    background-color: rgba(48, 5, 5, 0.8);
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
@@ -73,7 +73,7 @@ article, aside {
 
 article h2, aside h3 {
     margin-top: 0;
-    color: #0066cc;
+    color: #ff9900;
 }
 
 .gif {
@@ -98,9 +98,6 @@ article h2, aside h3 {
     z-index: 1000;
     animation: pulse 2s infinite;
 }
-/* ... (Estilos anteriores se mantienen igual) ... */
-
-/* Estilos para el contenedor del video */
 .video-container {
     margin: 20px auto;
     max-width: 800px;
@@ -121,12 +118,12 @@ article h2, aside h3 {
     box-shadow: 0 0 20px rgba(255, 165, 0, 0.6);
 }
 
-/* Efecto de iluminación cuando el video se reproduce */
+
 .video-container.playing {
     box-shadow: 0 0 30px rgba(255, 165, 0, 0.8);
 }
 
-/* Media Queries para dispositivos móviles */
+
 @media screen and (max-width: 768px) {
     .video-container {
         max-width: 95%;
@@ -139,7 +136,7 @@ article h2, aside h3 {
     }
 }
 
-/* ... (Media Queries anteriores se mantienen igual) ... */
+
 @media screen and (max-width: 768px) {
     body {
         font-size: 14px;

@@ -6,13 +6,13 @@
 }
 
 body {
-    background-image: url('../imagenes/a.png');
+    background-image: url('../imagenes/fon.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: center;
     margin: 0;
-    color: rgb(9, 75, 160);
+    color: rgb(245, 141, 5);
     text-align: center;
     font-family: "Roboto", sans-serif;
 }
@@ -73,7 +73,7 @@ article, aside {
 
 article h2, aside h3 {
     margin-top: 0;
-    color: #0066cc;
+    color: #ff7504;
 }
 
 .gif {

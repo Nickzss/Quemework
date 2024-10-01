@@ -23,24 +23,21 @@
     <div class="container">
         <div class="form-container">
             <h2>Contacto</h2>
-            <form>
-            <form
-            action="https://formspree.io/f/mqazrwje"
-            method="POST">
+            <form action="https://formspree.io/f/mqazrwje" method="POST">
                 <div class="input-group">
-                    <input type="text" required>
+                    <input type="text" name="nombres" id="nombres" placeholder="" required>
                     <label>Nombre</label>
                 </div>
                 <div class="input-group">
-                    <input type="email" required>
+                    <input type="text" name="apellidos" id="apellidos" placeholder="" required>
+                    <label>Apellido</label>
+                </div>
+                <div class="input-group">
+                    <input type="email" name="correo" id="correo" placeholder="" required>
                     <label>Correo</label>
                 </div>
                 <div class="input-group">
-                    <input type="text" required>
-                    <label>Asunto</label>
-                </div>
-                <div class="input-group">
-                    <textarea required></textarea>
+                    <textarea name="message" id="message" placeholder="" required></textarea>
                     <label>Mensaje</label>
                 </div>
                 <button type="submit">Enviar</button>

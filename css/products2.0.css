@@ -4,6 +4,7 @@
     font-weight: normal;
     font-style: normal;
 }
+
 body {
     font-family: 'Roboto', sans-serif;
     background-color: #f0f0f0;
@@ -13,23 +14,25 @@ body {
     padding: 0;
 }
 
-
 main {
     max-width: 1200px;
     margin: 0 auto;
     padding: 20px;
 }
+
 h1 {
     text-align: center;
     color: #ff9a02;
     margin-bottom: 30px;
 }
+
 footer {
     text-align: center;
     padding: 20px;
     background-color: rgba(0, 0, 0, 0.7);
     color: #fff;
 }
+
 .marca-especial {
     font-family: 'fuente', sans-serif;
     position: fixed;
@@ -44,36 +47,44 @@ footer {
     z-index: 1000;
 }
 
-/* Estilos para los productos */
 .productos-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 30px;
 }
+
 .producto {
     background-color: #fff;
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     overflow: hidden;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
 }
+
 .producto:hover {
     transform: translateY(-5px);
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
 }
+
 .producto h2 {
     font-size: 1.2em;
     color: #ff7b00;
     margin: 15px;
 }
+
 .producto p {
     font-size: 0.9em;
     margin: 0 15px 15px;
 }
+
 .producto .precio {
     font-weight: bold;
     color: #107C10;
 }
+
+/* Estilos actualizados para el botón con animación */
 .btn-comprar {
     display: block;
     background-color: #ff5e00;
@@ -83,29 +94,58 @@ footer {
     text-decoration: none;
     margin: 15px;
     border-radius: 5px;
-    transition: background-color 0.3s ease;
-}
-.btn-comprar:hover {
-    background-color: #ff7b00;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    transition: color 0.3s ease;
 }
 
-/* Estilos para el slider */
+.btn-comprar::after {
+    content: "";
+    width: 1px;
+    height: 1px;
+    background: none;
+    position: absolute;
+    z-index: -1;
+    top: 50%;
+    left: 50%;
+    transition: 0.3s ease-in-out all;
+    border-radius: 100px;
+    transform-origin: center;
+}
+
+.btn-comprar:hover::after {
+    transform: scale(400);
+    background: #ff7b00;
+}
+
+.btn-comprar:hover {
+    color: #fff;
+}
+
+/* Estilos actualizados para el slider y las imágenes */
 .slider-container {
     position: relative;
     overflow: hidden;
     height: 200px;
+    width: 100%;
+    background-color: #f5f5f5;
 }
+
 .slider {
     display: flex;
     transition: transform 0.3s ease;
     height: 100%;
 }
+
 .slider img {
     width: 100%;
-    height: 100%;
+    height: 200px;
     object-fit: cover;
+    object-position: center;
     flex-shrink: 0;
 }
+
 .slider-nav {
     position: absolute;
     bottom: 10px;
@@ -113,20 +153,27 @@ footer {
     transform: translateX(-50%);
     display: flex;
     gap: 10px;
+    z-index: 2;
 }
+
 .slider-nav label {
     width: 10px;
     height: 10px;
     border-radius: 50%;
-    background-color: rgb(255, 166, 0);
+    background-color: rgba(255, 166, 0, 0.7);
     cursor: pointer;
+    transition: background-color 0.3s ease;
 }
+
 .slider-nav label:hover {
     background-color: rgba(255, 255, 255, 0.8);
 }
+
 input[type="radio"] {
     display: none;
 }
+
+/* Controles del slider */
 #slide1-1:checked ~ .slider { transform: translateX(0); }
 #slide1-2:checked ~ .slider { transform: translateX(-100%); }
 #slide1-3:checked ~ .slider { transform: translateX(-200%); }
@@ -146,19 +193,31 @@ input[type="radio"] {
 #slide6-2:checked ~ .slider { transform: translateX(-100%); }
 #slide6-3:checked ~ .slider { transform: translateX(-200%); }
 
-/* Responsive design */
+/* Media queries para responsividad */
 @media screen and (max-width: 768px) {
     .productos-grid {
         grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     }
+    
+    .slider-container,
+    .slider img {
+        height: 180px;
+    }
 }
+
 @media screen and (max-width: 480px) {
     .productos-grid {
         grid-template-columns: 1fr;
     }
+    
     .marca-especial {
         font-size: 1.2em;
         bottom: 10px;
         right: 10px;
+    }
+    
+    .slider-container,
+    .slider img {
+        height: 150px;
     }
 }
